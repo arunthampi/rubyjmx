@@ -1,0 +1,23 @@
+= RubyJmx
+
+This is a JRuby library which gives the user easy access to the JMX interface provided by various Java App Servers.
+
+It's primary use case is to monitor services very easily (for memory, CPU, threads, etc)
+
+== Status
+
+As of now, you can only query the heap status from JMX. More features will be added (Patches and pull requests always welcome)
+  
+== Usage
+
+The lib can be used like so:
+
+  require 'lib/rubyjmx'
+
+  RubyJMX::Session.new('localhost', '3000',
+                        :username => 'username',
+                        :password => 'password', 
+                        :connect => true) do |session|
+    # Prints out in bytes, the number of free bytes in the heap on the JVM                    
+    puts session.heap_memory_snapshot.used
+  end
