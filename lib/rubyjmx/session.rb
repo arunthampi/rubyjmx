@@ -28,7 +28,7 @@ module RubyJMX
       # Then the snapshot object from the bean
       usage_snapshot = memory_mbean.get_heap_memory_usage
       # Return the object
-      return RubyJmx::HeapMemorySnapShot.new(usage_snapshot.get_committed, usage_snapshot.get_init,
+      return RubyJMX::HeapMemorySnapShot.new(usage_snapshot.get_committed, usage_snapshot.get_init,
                                               usage_snapshot.get_max, usage_snapshot.get_used)
     end
       

@@ -1,4 +1,4 @@
-module RubyJmx
+module RubyJMX
   # Defines a HeapMemorySnapShot class which is used to describe encapsulate the response
   # which comes from JMX
   class HeapMemorySnapShot
