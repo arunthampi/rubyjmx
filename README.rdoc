@@ -4,6 +4,10 @@ This is a JRuby library which gives the user easy access to the JMX interface pr
 
 It's primary use case is to monitor services very easily (for memory, CPU, threads, etc)
 
+== Acknowledgements
+
+The inspiration came from Jeff Mesnil's blog post: http://jmesnil.net/weblog/2007/03/23/jmx-scripts-using-jruby/
+
 == Status
 
 As of now, you can only query the heap status from JMX. More features will be added (Patches and pull requests always welcome)
