@@ -22,6 +22,6 @@ The lib can be used like so:
                         :username => 'username',
                         :password => 'password', 
                         :connect => true) do |session|
-    # Prints out in bytes, the number of free bytes in the heap on the JVM                    
+    # Prints out in bytes, the number of used bytes in the JVM heap
     puts session.heap_memory_snapshot.used
   end
