@@ -21,6 +21,8 @@ module RubyJMX
       yield self if block_given?
     end
       
+    # Returns a RubyJMX::HeapMemorySnapShot object with the committed, initialized, maximum
+    # and used number of bytes in the JVM
     def heap_memory_snapshot
       raise ArgumentError, 'You do not seem to be connected' if @mbean_server_connection.nil?
       # First get the bean,
@@ -33,6 +35,7 @@ module RubyJMX
     end
       
 
+    # Connects to JMX with the given host, port, username and password
     def connect_to_jmx
       jmx_env = setup_jmx_environment
       connector = JMXConnectorFactory::connect(JMXServiceURL.new("service:jmx:rmi:///jndi/rmi://" + 
